@@ -138,11 +138,12 @@ function initializeLiff() {
     }).catch(error => {
         uiStatusError(makeErrorMsg(error), false);
     });
+    window.alert('getProfile');
     liff.getProfile().then(function (profile) {
-        alert('TEST');
+        window.alert('TEST');
         document.getElementById('useridprofilefield').textContent = profile.userId;
         document.getElementById('displaynamefield').textContent = profile.displayName;
-        alert('profile.displayName');
+        window.alert('profile.displayName');
 
         const profilePictureDiv = document.getElementById('profilepicturediv');
         if (profilePictureDiv.firstElementChild) {
@@ -154,7 +155,7 @@ function initializeLiff() {
         profilePictureDiv.appendChild(img);
 
         document.getElementById('statusmessagefield').textContent = profile.statusMessage;
-        toggleProfileData();
+        //toggleProfileData();
     }).catch(function (error) {
         window.alert("Error getting profile: " + error);
     });
