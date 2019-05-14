@@ -139,8 +139,10 @@ function initializeLiff() {
         uiStatusError(makeErrorMsg(error), false);
     });
     liff.getProfile().then(function (profile) {
+        alert('TEST');
         document.getElementById('useridprofilefield').textContent = profile.userId;
         document.getElementById('displaynamefield').textContent = profile.displayName;
+        alert('profile.displayName');
 
         const profilePictureDiv = document.getElementById('profilepicturediv');
         if (profilePictureDiv.firstElementChild) {
