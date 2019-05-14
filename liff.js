@@ -138,6 +138,24 @@ function initializeLiff() {
     }).catch(error => {
         uiStatusError(makeErrorMsg(error), false);
     });
+    liff.getProfile().then(function (profile) {
+        document.getElementById('useridprofilefield').textContent = profile.userId;
+        document.getElementById('displaynamefield').textContent = profile.displayName;
+
+        const profilePictureDiv = document.getElementById('profilepicturediv');
+        if (profilePictureDiv.firstElementChild) {
+            profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
+        }
+        const img = document.createElement('img');
+        img.src = profile.pictureUrl;
+        img.alt = "Profile Picture";
+        profilePictureDiv.appendChild(img);
+
+        document.getElementById('statusmessagefield').textContent = profile.statusMessage;
+        toggleProfileData();
+    }).catch(function (error) {
+        window.alert("Error getting profile: " + error);
+    });
 }
 
 function liffCheckAvailablityAndDo(callbackIfAvailable) {
