@@ -138,7 +138,7 @@ function initializeLiff() {
     }).catch(error => {
         uiStatusError(makeErrorMsg(error), false);
     });
-    // window.alert('getProfile');
+    window.alert('- getProfile -');
     liff.getProfile().then(function (profile) {
         // window.alert('TEST');
         document.getElementById('useridprofilefield').textContent = profile.userId;
