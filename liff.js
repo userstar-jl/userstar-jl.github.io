@@ -139,12 +139,12 @@ function initializeLiff() {
         uiStatusError(makeErrorMsg(error), false);
     });
 //    window.alert('- getProfile -');
+/*
     liff.getProfile().then(function (profile) {
         // window.alert('TEST');
         document.getElementById('useridprofilefield').textContent = profile.userId;
         document.getElementById('displaynamefield').textContent = profile.displayName;
         // window.alert(profile.displayName);
-/*
         const profilePictureDiv = document.getElementById('profilepicturediv');
         if (profilePictureDiv.firstElementChild) {
             profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
