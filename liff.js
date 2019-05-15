@@ -138,13 +138,13 @@ function initializeLiff() {
     }).catch(error => {
         uiStatusError(makeErrorMsg(error), false);
     });
-    window.alert('- getProfile -');
+//    window.alert('- getProfile -');
     liff.getProfile().then(function (profile) {
         // window.alert('TEST');
         document.getElementById('useridprofilefield').textContent = profile.userId;
         document.getElementById('displaynamefield').textContent = profile.displayName;
         // window.alert(profile.displayName);
-
+/*
         const profilePictureDiv = document.getElementById('profilepicturediv');
         if (profilePictureDiv.firstElementChild) {
             profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
@@ -159,6 +159,7 @@ function initializeLiff() {
     }).catch(function (error) {
         window.alert("Error getting profile: " + error);
     });
+*/
 }
 
 function liffCheckAvailablityAndDo(callbackIfAvailable) {
