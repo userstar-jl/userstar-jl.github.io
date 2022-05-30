@@ -72,9 +72,9 @@ limitations under the License.
 <!-- Import and configure the Firebase SDK -->
 <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
 <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
-<script src="/__/firebase/9.8.1/firebase-app-compat.js"></script>
-<script src="/__/firebase/9.8.1/firebase-messaging-compat.js"></script>
-<script src="/__/firebase/init.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.8.2/firebase-messaging-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/init.js"></script>
 
 <script>
   // Retrieve Firebase Messaging object.
@@ -99,7 +99,7 @@ limitations under the License.
     showToken('loading...');
     // Get registration token. Initially this makes a network call, once retrieved
     // subsequent calls to getToken will return from cache.
-    messaging.getToken({vapidKey: '<YOUR_PUBLIC_VAPID_KEY_HERE>'}).then((currentToken) => {
+    messaging.getToken({vapidKey: 'BMRXn2nhnEN3tK9wYSOfyxrWIhRLlAloOwQ1Q5dHZoT5owvDlpBQas86CmNG7Q4N970kAj4tBYhBmrVBtZh3NzE'}).then((currentToken) => {
       if (currentToken) {
         sendTokenToServer(currentToken);
         updateUIForPushEnabled(currentToken);
@@ -219,6 +219,49 @@ limitations under the License.
   }
 
   resetUI();
+</script>
+<script type="module">
+
+  // Import the functions you need from the SDKs you need
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+
+  // Your web app's Firebase configuration
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyBKpbnKtxV4ybjtbz8WvN6fYq139XhkQkY",
+
+    authDomain: "jl-github.firebaseapp.com",
+
+    projectId: "jl-github",
+
+    storageBucket: "jl-github.appspot.com",
+
+    messagingSenderId: "831573208640",
+
+    appId: "1:831573208640:web:fd3e1a48f9c238e733f9a5",
+
+    measurementId: "G-QRP0Y9PSE7"
+
+  };
+
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+
+  const analytics = getAnalytics(app);
+
 </script>
 </body>
 </html>
