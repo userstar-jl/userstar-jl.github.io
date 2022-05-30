@@ -130,6 +130,11 @@ limitations under the License.
   messaging.onMessage((payload) => {
     console.log('Message received. ', payload);
     // Update the UI to include the received message.
+
+    new Notification(payload.notification.title,{
+            body: payload.notification.body
+        })
+        
     appendMessage(payload);
   });
 
@@ -236,9 +241,6 @@ limitations under the License.
     dataElement.textContent = JSON.stringify(payload, null, 2);
     messagesElement.appendChild(dataHeaderElement);
     messagesElement.appendChild(dataElement);
-    new Notification(payload.notification.title,{
-            body: payload.notification.body
-        })
   }
 
   // Clear the messages element of all children.
