@@ -82,9 +82,9 @@ limitations under the License.
 
   // Import the functions you need from the SDKs you need
 
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+  // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
 
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+  // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
 
   // TODO: Add SDKs for Firebase products that you want to use
 
@@ -95,7 +95,7 @@ limitations under the License.
 
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-  const firebaseConfig = {
+  var firebaseConfig = {
 
     apiKey: "AIzaSyBKpbnKtxV4ybjtbz8WvN6fYq139XhkQkY",
 
@@ -113,16 +113,9 @@ limitations under the License.
 
   };
 
-
   // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-  const app = initializeApp(firebaseConfig);
-
-  const analytics = getAnalytics(app);
-
-</script>
-
-<script>
   // Retrieve Firebase Messaging object.
   const messaging = firebase.messaging();
 
