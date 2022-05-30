@@ -5,6 +5,27 @@ importScripts('https://www.gstatic.com/firebasejs/9.8.2/firebase-app-compat.js')
 importScripts('https://www.gstatic.com/firebasejs/9.8.2/firebase-messaging-compat.js');
 // importScripts('/__/firebase/init.js');
 
+var firebaseConfig = {
+
+  apiKey: "AIzaSyBKpbnKtxV4ybjtbz8WvN6fYq139XhkQkY",
+
+  authDomain: "jl-github.firebaseapp.com",
+
+  projectId: "jl-github",
+
+  storageBucket: "jl-github.appspot.com",
+
+  messagingSenderId: "831573208640",
+
+  appId: "1:831573208640:web:fd3e1a48f9c238e733f9a5",
+
+  measurementId: "G-QRP0Y9PSE7"
+
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 const messaging = firebase.messaging();
 
 /**
