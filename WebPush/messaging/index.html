@@ -78,6 +78,50 @@ limitations under the License.
   <script src="https://www.gstatic.com/firebasejs/init.js"></script> 
 -->
 
+<script type="module">
+
+  // Import the functions you need from the SDKs you need
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+
+  // Your web app's Firebase configuration
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyBKpbnKtxV4ybjtbz8WvN6fYq139XhkQkY",
+
+    authDomain: "jl-github.firebaseapp.com",
+
+    projectId: "jl-github",
+
+    storageBucket: "jl-github.appspot.com",
+
+    messagingSenderId: "831573208640",
+
+    appId: "1:831573208640:web:fd3e1a48f9c238e733f9a5",
+
+    measurementId: "G-QRP0Y9PSE7"
+
+  };
+
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+
+  const analytics = getAnalytics(app);
+
+</script>
+
 <script>
   // Retrieve Firebase Messaging object.
   const messaging = firebase.messaging();
@@ -221,49 +265,6 @@ limitations under the License.
   }
 
   resetUI();
-</script>
-<script type="module">
-
-  // Import the functions you need from the SDKs you need
-
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
-
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
-
-  // TODO: Add SDKs for Firebase products that you want to use
-
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-
-  // Your web app's Firebase configuration
-
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-  const firebaseConfig = {
-
-    apiKey: "AIzaSyBKpbnKtxV4ybjtbz8WvN6fYq139XhkQkY",
-
-    authDomain: "jl-github.firebaseapp.com",
-
-    projectId: "jl-github",
-
-    storageBucket: "jl-github.appspot.com",
-
-    messagingSenderId: "831573208640",
-
-    appId: "1:831573208640:web:fd3e1a48f9c238e733f9a5",
-
-    measurementId: "G-QRP0Y9PSE7"
-
-  };
-
-
-  // Initialize Firebase
-
-  const app = initializeApp(firebaseConfig);
-
-  const analytics = getAnalytics(app);
-
 </script>
 </body>
 </html>
